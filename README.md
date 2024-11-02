@@ -62,49 +62,65 @@ Create table salesdata(Order_ID integer not null,
 					   TotalRevenue integer,
 					   totalsales integer
 					   );
+
 ```
-select *  from salesdata
+
+select *  from salesdata;
+
 ```
- --- the total sales value------
-```
-Select SUM(totalsales) AS totalsalesvalue
-FROM salesdata----IMPORT DATASET---
+ 
+
+Select SUM(totalsales) AS totalsalesvalue,
+FROM salesdata;
 
 
 
-
 ```
-Select product,Sum(totalsales) AS totalsalesvalue
-FROM salesdata
+
+
+
+Select product,Sum(totalsales) AS totalsalesvalue,
+FROM salesdata,
 group by product
-order by totalsalesvalue desc
-
+order by totalsalesvalue desc;
 
 ```
-Select region,count(*) AS
+
+
+Select region,count(*)
+AS
 number_of_sales
-from salesdata
+FROM salesdata
 group by region;
+
+
  ```
 
-select product,sum(totalsales) as totalsalesvalue
-from salesdata 
+
+select product,sum(totalsales) 
+as totalsalesvalue
+FROM salesdata 
 group by product
 order by totalsalesvalue DESC
 LIMIT 1;
 
+
+
 ```
+
+
  SELECT product,
-sum(TotalRevenue)  as totalrevenue
-from salesdata
+sum(TotalRevenue)
+AS totalrevenue
+FROM  salesdata
 group by product
-order by totalrevenue desc
+order by totalrevenue desc;
 
 ```
-select DATE_TRUNC('month',order_date)
-AS month,
-     sum(  totalsales) AS totalsalesvalue
 
+SELECT  DATE_TRUNC('month',order_date)
+AS month,
+     sum(totalsales) AS totalsalesvalue
 from salesdata
 where
     EXTRACT(YEAR FROM order_date) =
@@ -113,8 +129,11 @@ GROUP BY
     month
 order by 
 	month;
-```	
-	select 
+ 
+```
+
+
+SELECT
 Customer_Id,
 sum(Quantity * Unit_Price) AS
 Total_purchaseamount
@@ -126,6 +145,8 @@ from
 	  Total_purchaseamount DESC
 	  LIMIT 5;
 ```
+
+
  
 WITH total_sales AS (
 SELECT
@@ -145,9 +166,10 @@ salesdata
 	 GROUP BY 
 	  region;
  
-   
-   
+  ``` 
+  
    -------identify products with no sales in the last quarter-----
+
   WITH all_products AS(
    SELECT DISTINCT product
    FROM salesdata
@@ -165,7 +187,7 @@ WHERE
 ap.product NOT IN (SELECT
 product from recent_sales);
 
-
+```
 
 
 
