@@ -213,9 +213,10 @@ product from recent_sales);
 
 ### RESULTS/FINDINGS
 
-•	Shoe product has the highest sales from the south region totaling 546,300 for both 2023(247500)   and 2024(298800), which is 26% of total sales of 2,101,090.
+•	Shoe product has the highest sales from the south region totaling 546,300 for both 2023(247,500) and 2024(298,800), which is 26% of total sales of 2,101,090.
 •	Shoes product has the highest Revenue From the south region totaling 546,300 for both 2023(247500)   and 2024(298800), which is 26% of total sales of 2,101,090.
-•	East and north has the highest count of product bought  in 1489 each in 2023, all count of product bought dropped in all regions in 2024 for example in the east region it dropped from 1489 to 994, in north region 1489 to 992, in south region 1488 to 992, in west region 1486 to 991
+•	East and north has the highest count of product bought  in 1489 each in 2023, all count of product bought dropped in all regions in 2024 for example in the east region it 
+        dropped from 1489 to 994, in north region 1489 to 992, in south region 1488 to 992, in west region 1486 to 991
 •	East and north has the highest count of customers totaling 1489 each in  2023
 
 
