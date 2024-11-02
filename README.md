@@ -64,21 +64,18 @@ Create table salesdata(Order_ID integer not null,
 					   );
 
 ```
-
 select *  from salesdata;
 
-```
- 
 
+ 
+```
 Select SUM(totalsales) AS totalsalesvalue,
 FROM salesdata;
 
 
 
+
 ```
-
-
-
 Select product,Sum(totalsales) AS totalsalesvalue,
 FROM salesdata,
 group by product
@@ -94,9 +91,9 @@ FROM salesdata
 group by region;
 
 
- ```
+ 
 
-
+```
 select product,sum(totalsales) 
 as totalsalesvalue
 FROM salesdata 
@@ -106,9 +103,8 @@ LIMIT 1;
 
 
 
+
 ```
-
-
  SELECT product,
 sum(TotalRevenue)
 AS totalrevenue
@@ -116,8 +112,8 @@ FROM  salesdata
 group by product
 order by totalrevenue desc;
 
-```
 
+```
 SELECT  DATE_TRUNC('month',order_date)
 AS month,
      sum(totalsales) AS totalsalesvalue
@@ -130,9 +126,9 @@ GROUP BY
 order by 
 	month;
  
+
+
 ```
-
-
 SELECT
 Customer_Id,
 sum(Quantity * Unit_Price) AS
@@ -144,10 +140,10 @@ from
 	order by
 	  Total_purchaseamount DESC
 	  LIMIT 5;
-```
 
 
- 
+
+ ```
 WITH total_sales AS (
 SELECT
 SUM(totalsales) AS TOTAL
