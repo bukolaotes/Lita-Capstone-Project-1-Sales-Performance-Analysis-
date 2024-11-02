@@ -64,13 +64,20 @@ Create table salesdata(Order_ID integer not null,
 					   );
 
 ```
+
+
+
+```
 select *  from salesdata;
+```
 
 
  
 ```
 Select SUM(totalsales) AS totalsalesvalue,
 FROM salesdata;
+```
+
 
 
 
@@ -80,15 +87,17 @@ Select product,Sum(totalsales) AS totalsalesvalue,
 FROM salesdata,
 group by product
 order by totalsalesvalue desc;
-
 ```
 
 
+
+```
 Select region,count(*)
 AS
 number_of_sales
 FROM salesdata
 group by region;
+```
 
 
  
@@ -100,6 +109,7 @@ FROM salesdata
 group by product
 order by totalsalesvalue DESC
 LIMIT 1;
+```
 
 
 
@@ -111,6 +121,9 @@ AS totalrevenue
 FROM  salesdata
 group by product
 order by totalrevenue desc;
+```
+
+
 
 
 ```
@@ -125,7 +138,8 @@ GROUP BY
     month
 order by 
 	month;
- 
+ ```
+
 
 
 ```
@@ -140,6 +154,8 @@ from
 	order by
 	  Total_purchaseamount DESC
 	  LIMIT 5;
+```
+
 
 
 
@@ -163,9 +179,14 @@ salesdata
 	  region;
  
   ``` 
-  
-   -------identify products with no sales in the last quarter-----
 
+
+
+
+ -------identify products with no sales in the last quarter-----
+
+
+```
   WITH all_products AS(
    SELECT DISTINCT product
    FROM salesdata
