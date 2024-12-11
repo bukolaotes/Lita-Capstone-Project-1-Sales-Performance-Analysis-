@@ -187,33 +187,9 @@ salesdata
 
 
 
- ```
-WITH total_sales AS (
-SELECT
-SUM(totalsales) AS TOTAL
-FROM 
-salesdata
-)
- SELECT
- Region,
- SUM(totalsales) AS
- region_sales,
-   (SUM(totalsales) * 100.0 /
-   (SELECT total FROM total_sales)) AS
-   percentage_of_total
-   FROM
-     salesdata
-	 GROUP BY 
-	  region;
- 
-  ``` 
 
-
-
-
- -------identify products with no sales in the last quarter-----
-
-
+   -------identify products with no sales in the last quarter-----
+   
 ```
   WITH all_products AS(
    SELECT DISTINCT product
@@ -234,6 +210,7 @@ product from recent_sales);
 
 ```
 
+![image](https://github.com/user-attachments/assets/3f98a980-70ef-45a7-8520-1d4ca1cf00c3)
 
 
 
