@@ -38,14 +38,14 @@ The dataset "salesdata.xls" file  contains sales transaction records for the las
 EDA involved exploring the sales data to answer key questions,such as :
 
 
-- What is  total sales for each product category?
-- What is the number of sales transactions in each region?
-- Which product is the highest-selling  by total sales value?
-- What is total revenue per product?
-- What is the monthly sales totals for the current year?
-- Who are the top 5 customers by total purchase amount?
-- What is the percentage of total sales contributed by each region?
-- which  products are with no sales in the last quarter?
+-  retrieve the total sales for each product category.
+-  find the number of sales transactions in each region.
+-  find the highest-selling product by total sales value.
+-  calculate total revenue per product.
+-  calculate monthly sales totals for the current year.
+-  find the top 5 customers by total purchase amount.
+-  calculate the percentage of total sales contributed by each region.
+-  identify products with no sales in the last quarter.
 
 ### Data Analytics
 
@@ -93,14 +93,16 @@ order by totalsalesvalue desc;
 ![image](https://github.com/user-attachments/assets/da522e15-bbe2-4c6f-95be-30f379a47b8d)
 
 
+----- Which product is the highest-selling  by total sales value-------
 
 ```
-Select region,count(*)
-AS
-number_of_sales
-FROM salesdata
-group by region;
+select product,sum(totalsales) as totalsalesvalue
+from salesdata 
+group by product
+order by totalsalesvalue DESC
+LIMIT 1;
 ```
+![image](https://github.com/user-attachments/assets/fd45d72a-b443-404b-864a-bdcb823c7ce6)
 
 
  
