@@ -71,7 +71,7 @@ Create table salesdata(Order_ID integer not null,
 select *  from salesdata;
 ```
 
-
+------- What is  total sales for each product category--------
  
 ```
 Select SUM(totalsales) AS totalsalesvalue,
