@@ -77,6 +77,7 @@ select *  from salesdata;
 Select SUM(totalsales) AS totalsalesvalue,
 FROM salesdata;
 ```
+![image](https://github.com/user-attachments/assets/d5260f0c-c762-41f7-bc95-d5f86532e399)
 
 
 
