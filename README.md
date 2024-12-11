@@ -237,6 +237,8 @@ product from recent_sales);
 
 
  Focus marketing efforts on top-performing regions and product lines.
+ 
  Address underperforming regions or product categories with targeted strategies
+ 
  Explore opportunities for cross-selling or upselling
 
