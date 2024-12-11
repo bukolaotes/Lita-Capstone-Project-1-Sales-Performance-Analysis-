@@ -159,20 +159,30 @@ from
 ![image](https://github.com/user-attachments/assets/8100bd5d-1151-4b79-a820-e5d8e28af40f)
 
 
+---------------	calculate the percentage of total sales contributed by each region------
+
 
 ```
+WITH total_sales AS (
 SELECT
-Customer_Id,
-sum(Quantity * Unit_Price) AS
-Total_purchaseamount
-from
-   salesdata
- group by
-    Customer_id
-	order by
-	  Total_purchaseamount DESC
-	  LIMIT 5;
+SUM(totalsales) AS TOTAL
+FROM 
+salesdata
+)
+ SELECT
+ Region,
+ SUM(totalsales) AS
+ region_sales,
+   (SUM(totalsales) * 100.0 /
+   (SELECT total FROM total_sales)) AS
+   percentage_of_total
+   FROM
+     salesdata
+	 GROUP BY 
+	  region;
+ 
 ```
+![image](https://github.com/user-attachments/assets/c588ae59-1f34-4ee1-944a-76a7b6712405)
 
 
 
