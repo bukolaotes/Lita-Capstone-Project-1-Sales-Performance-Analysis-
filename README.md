@@ -120,15 +120,25 @@ order by totalrevenue desc
 
 
 
+------calculate monthly sales totals for the current year------
+```
 
+select DATE_TRUNC('month',order_date)
+AS month,
+     sum(  totalsales) AS totalsalesvalue
+
+from salesdata
+where
+    EXTRACT(YEAR FROM order_date) =
+EXTRACT(YEAR FROM CURRENT_DATE)
+GROUP BY
+    month
+order by 
+	month;
+	
+ 
 ```
- SELECT product,
-sum(TotalRevenue)
-AS totalrevenue
-FROM  salesdata
-group by product
-order by totalrevenue desc;
-```
+![image](https://github.com/user-attachments/assets/36271504-815b-44b3-a099-4d8e65288a98)
 
 
 
