@@ -81,7 +81,7 @@ FROM salesdata;
 
 
 
-
+------- What is the number of sales transactions in each region?------
 
 ```
 Select product,Sum(totalsales) AS totalsalesvalue,
@@ -89,6 +89,7 @@ FROM salesdata,
 group by product
 order by totalsalesvalue desc;
 ```
+![image](https://github.com/user-attachments/assets/6fb3f422-72a4-4690-a33c-83470b556947)
 
 
 
