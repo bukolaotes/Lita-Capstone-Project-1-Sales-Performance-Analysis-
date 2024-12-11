@@ -90,6 +90,7 @@ FROM salesdata,
 group by product
 order by totalsalesvalue desc;
 ```
+![image](https://github.com/user-attachments/assets/da522e15-bbe2-4c6f-95be-30f379a47b8d)
 
 
 
