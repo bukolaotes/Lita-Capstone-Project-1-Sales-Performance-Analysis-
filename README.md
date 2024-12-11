@@ -106,15 +106,17 @@ LIMIT 1;
 
 
  
+-----calculate total revenue per product------
 
 ```
-select product,sum(totalsales) 
-as totalsalesvalue
-FROM salesdata 
+SELECT product,
+sum(TotalRevenue)  as totalrevenue
+from salesdata
 group by product
-order by totalsalesvalue DESC
-LIMIT 1;
+order by totalrevenue desc
+
 ```
+![image](https://github.com/user-attachments/assets/6dc0105e-58e3-4213-8d34-5029cd7445f7)
 
 
 
