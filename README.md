@@ -142,20 +142,21 @@ order by
 
 
 
-
+---------find the top 5 customers by total purchase amount------
 ```
-SELECT  DATE_TRUNC('month',order_date)
-AS month,
-     sum(totalsales) AS totalsalesvalue
-from salesdata
-where
-    EXTRACT(YEAR FROM order_date) =
-EXTRACT(YEAR FROM CURRENT_DATE)
-GROUP BY
-    month
-order by 
-	month;
+select 
+Customer_Id,
+sum(Quantity * Unit_Price) AS
+Total_purchaseamount
+from
+   salesdata
+ group by
+    Customer_id
+	order by
+	  Total_purchaseamount DESC
+	  LIMIT 5;
  ```
+![image](https://github.com/user-attachments/assets/8100bd5d-1151-4b79-a820-e5d8e28af40f)
 
 
 
